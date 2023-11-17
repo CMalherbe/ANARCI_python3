@@ -9,7 +9,7 @@ class CustomInstallCommand(install):
        install.run(self)
        # Post-installation routine
        ANARCI_LOC = os.path.join(site.getsitepackages()[0], 'anarci') # site-packages/ folder
-       ANARCI_BIN = sys.executable.split('python')[0] # bin/ folder
+       ANARCI_BIN = sys.executable.split('python3')[0] # bin/ folder
 
        shutil.copy('bin/ANARCI', ANARCI_BIN) # copy ANARCI executable
        print("INFO: ANARCI lives in: ", ANARCI_LOC) 
